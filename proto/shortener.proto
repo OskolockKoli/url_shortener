@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package shortener;
+
+service ShortenerService {
+    rpc CreateShortLink(CreateShortLinkRequest) returns (CreateShortLinkResponse);
+    rpc ResolveShortLink(ResolveShortLinkRequest) returns (ResolveShortLinkResponse);
+}
+
+message CreateShortLinkRequest {
+    string url = 1;
+}
+
+message CreateShortLinkResponse {
+    string short_link = 1;
+}
+
+message ResolveShortLinkRequest {
+    string short_link = 1;
+}
+
+message ResolveShortLinkResponse {
+    string url = 1;
+}

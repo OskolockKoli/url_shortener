@@ -1,4 +1,4 @@
-module ozon_bank_testovoe
+module url_shortener
 
 go 1.18
 
